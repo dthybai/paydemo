@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"/>
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=no" name="format-detection">
+		<meta content="email=no" name="format-detection">
+		<title></title>
+		<style>
+			 html {
+            font-size: 125%; 
+            /* 20梅16=125% min-font-size:12px bug*/
+           
+        }
+        
+        @media only screen and (min-width: 376px) {
+            html {
+                font-size: 146%!important; /* 30.08梅16=188% */
+            }
+        }
+        @media only screen and (min-width: 416px) {
+            html {
+                font-size: 218%!important; /* 38.88梅16=218% */
+            }
+        }
+        @media only screen and (min-width: 768px) {
+            html {
+                font-size: 250%!important; /* 40梅16=250% */
+            }
+        }
+        body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+            margin: 0;padding: 0;border: 0;font-size: 1em;font: inherit;vertical-align: baseline;font-family: "Source Han Sans SC"}
+        body {font-family: "Source Han Sans SC";font-size: 0.7rem;color: #333;line-height: 0.7rem;width: 100%;background: #eeeeee;height: 100%;}
+        em {font-style: normal}
+        li {list-style: none}
+        a {text-decoration: none;outline: 0;color: #333;}
+       /* .content{margin-top: 1.5rem;}*/
+        .imgIcon{height: 2.2rem; line-height: 2.2rem; text-align: center; padding-top: 0.4rem; border-top: 1px solid #CCCCCC;border-bottom: 2px solid #CCCCCC;}
+        .imgIcon img{height: 1.8rem; text-align: center; }
+        .money{height: 1.6rem; line-height: 1.6rem; font-size: 1.6rem;}
+        .moneyNumber{color: red;}
+        .msgs{line-height: 62px; text-align: center;  height: 62px; color: #ffffff;font-size: 15px; }
+        .imgGif p{line-height: 1.5rem; height: 1.5rem; text-align: left;padding-left: 10px;}
+        .msgC{ margin-top: 0.8rem; height: 2rem;line-height: 2rem;border-top: 1px solid #CCCCCC;font-size: 1rem;}
+        .fontColor{color: #0C8EE6;}
+        .footer{text-align: center;}
+        .footer p{padding-top: 0.3rem;}
+        .btns{height: 1.6rem; line-height: 1.6rem; background: #fff; width: 80%; margin: 0 auto; text-align: center;border-radius: 4px; background: #FF0000; color: #FFFFFF}
+        .videos img{width: 19vh; height: 30vh; margin: 5px auto; }
+        .msg{text-align: center;line-height: 1rem;  color: #041C40; font-weight: 800; font-size: 14px; margin-top: 0.6rem; margin-bottom: 0.75rem;}
+        #qrcode{width:136px; height:136px;margin: 0 auto;}
+        .jqcode_warp{
+        	font-size: 0.8rem;
+		    width: 136px;
+		    height: 146px;
+		    margin: 0 auto;
+
+		    /*background: linear-gradient(to left, #17a2b8, #17a2b8) left top no-repeat, linear-gradient(to bottom, #17a2b8, #17a2b8) left top no-repeat, linear-gradient(to left, #17a2b8, #17a2b8) right top no-repeat, linear-gradient(to bottom, #17a2b8, #17a2b8) right top no-repeat, linear-gradient(to left, #17a2b8, #17a2b8) left bottom no-repeat, linear-gradient(to bottom, #17a2b8, #17a2b8) left bottom no-repeat, linear-gradient(to left, #17a2b8, #17a2b8) right bottom no-repeat, linear-gradient(to left, #17a2b8, #17a2b8) right bottom no-repeat;
+		    background-size: 3px 30px, 30px 3px, 3px 30px, 30px 3px;
+		    border-radius: 4px;*/
+        }
+           .container {
+                text-align: center;
+            }
+            .container h2{
+            	margin-top: 1rem;
+            	height: 1rem;
+            	line-height: 1rem;
+            	font-size: 0.8rem;
+            	color: #FF4500;
+            }
+            .container p{
+                color: #888;
+            }
+            .entersland {
+			    height: 5.375rem;
+			    margin: 0px 0.75rem;
+			    margin-top: 0.75rem;
+			    overflow: hidden;
+			    border-radius: 4.5px;
+				background: #F0F9FC;
+			}
+				.cons{width: 94%;line-height: 1.77rem; color: #fff; font-size: 0.6rem; margin: 0 0.5rem;}
+					.cons .two{
+						line-height: 1rem;
+						float: left;
+						width: 70%;
+					}
+					.cons .twos{
+						line-height: 1rem;
+						font-size: 0.4rem;
+						float: left;
+						width: 70%;
+					}
+					.cons p{display: inline-block;}
+					.cons .navs{color: #6F708D;width: 28%; font-size: 16px; font-family: "Regular"; }
+					.cons .navmsg{color: #000000; font-weight: 700; font-size: 15px; }
+					/*#textsThr {
+					    color: #FFFFFF;
+					    font-size: 34px;
+					    text-align: center;
+					    line-height: 2rem;
+					    height: 2rem;
+					}*/
+					.centers input{border: 1px solid #333 ; width: 124%; height: 1.2rem; background:#fff; outline:none; border-radius: 5px; text-align: center;}
+					
+					
+				.cons .three {
+					       width: 80%;
+					       margin-top: 0.5rem;
+						    line-height: 0.8rem;
+						    text-align: center;
+						    border-radius: 5px;
+						    color: #5DC0DF;
+						    text-align: center;
+						    float: right;
+						    width: 30px;
+						    font-size: 12px;
+					}
+					.cons p{display: inline-block;}
+					.cons .navmsg{color: #000000; font-weight: 700; }
+					/*#textsThr {
+						margin:  auto;
+					    color: #FFFFFF;
+					    font-size: 34px;
+					    text-align: center;
+					    font-family: "DIN Alternate Bold";
+					}*/
+					.consA{width: 100%;line-height: 1.4rem; color: #fff; font-size: 0.6rem;}
+					.consA .two{
+						line-height: 1rem;
+						float: left;
+						width: 70%;
+					}
+					.consA .twos{
+						line-height: 1rem;
+						font-size: 0.4rem;
+						float: left;
+						width: 70%;
+					}
+					
+					.consA .navs{color: #70718e;width: 22%; }
+					.consA .navmsg{color: #000000; font-weight: 700; float: left;}
+					.centers input{border: 1px solid #333 ; width: 124%; height: 1.2rem; background:#fff; outline:none; border-radius: 5px; text-align: center;}
+					.consA {position: relative;}
+					   #input {position: absolute;top: 0;left: 0;opacity: 0;z-index: -10;}
+					   .consA {position: relative;}
+				.consA .threeA {
+					font-size: 12px;
+					      display: inline-block;
+					}
+					#textsThrs{margin-left: 0.7rem; color: #fff;}
+					.timeout{text-align: center; color: #818d9f; height: 1.8rem; line-height: 1.6rem;font-size: 16px;}
+					.timeout span{color: #ff612a;}
+					.titles{margin: 0px 1.5rem; margin-top: 30%}
+					.titles h4{ color: #D9A668; font-size: 14px; font-weight: 800;line-height: 1.25rem;margin-top: 0.6rem;}
+					.titles p{ font-size: 13px; color: #6F708D;line-height: 0.925rem;margin-bottom: 5px; margin-top: 5px;}
+					
+					.danger{height: 5rem; background: url(bgmsg.png); background-size: 100% 100%;}
+					
+					.danger h4{font-size: 18px; line-height: 7rem; color: #7c5412;  text-align: center;}
+					.moneycontent{
+						height: 11rem;
+						background-image: url(money.png);
+						background-size: 100% 100%;
+						position: relative;
+					}
+					.consB{text-align: center; font-size: 17px;color: #FFFFFF;padding-top: 2rem;}
+					.codeContent{height: 11rem; width:90%; background: #FFFFFF; border-radius: 10px; z-index: 1; position: absolute;  left: 50%; top: 30%; transform: translate(-50%,-50%);}
+					.codeFont{font-size: 12px; color: #D9A668; text-align: center; line-height:1.65rem;}
+					.msgtitle{ font-size: 14px; font-weight: bold; color: #041C40; margin: 0 0.75rem; margin-top: 1.45rem; line-height: 1rem; text-align: center;}
+        </style>
+	</head>
+	<body>
+		<div class="content">
+			<div class="moneycontent">
+			  	<div class="consB">
+			  		请在<span>08:20</span>内支付，否则无效
+			  	</div>
+			 </div>
+		</div>
+			<div class="codeContent">
+			<div class="entersland"> 
+				<div class="cons">
+			  		<p class="navs">充值金额：</p><p class="navmsg" id="textsThr">55555.00</p>
+				  	<div class="three" onclick="copysTwo()">复制</div>	
+			  	</div>
+		       	<div class="cons">
+		                    <p class="navs">账号：</p><p class="navmsg" id="textsTwo">3232 3232 3232 3232</p>
+		                    <div class="three" onclick="copyContentOne()">复制</div>
+		        </div>
+		        <div class="cons">
+		                    <p class="navs">收款方：</p><p class="navmsg" id="textsOne">谢</p>
+		                    <div class="three" onclick="copyContent()">复制</div>
+		       	</div>
+			 </div>
+			 <p class="msgtitle">
+			 	请打开支付宝 > 点击转账 > 点击转到银行卡> 复制上方收款人信息> 完成付款
+			 </p>
+			</div>
+			 <div class="titles">
+			 	<h4>注意</h4>
+			 	<p>1. 请勿修改定单金额，否则无法到账</p>
+				<p>2. 支付成功后，30秒内到账，请勿重复付款</p>
+			 </div>
+	</div>
+	</body>
+	<script src="qrcode.js"></script>
+	<script src="jquery.min.js"></script>
+	<script src="index.js"></script>
+	<link rel="stylesheet" type="text/css" href="layer(1).css"/>
+	<script src="layer.js"></script>
+	<script>
+		var doc = document.documentElement;
+        relHeight = (doc.clientHeight > doc.scrollHeight) ? doc.clientHeight : doc.scrollHeight;//获取屏幕高度和当前页面高度中的较大值
+        document.getElementById('test').style.height = relHeight+'px';//id为bg的div就是我页面中的遮罩层
+	</script>
+</html>
